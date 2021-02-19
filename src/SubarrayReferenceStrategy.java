@@ -52,18 +52,18 @@ public class SubarrayReferenceStrategy {
 	public static void main(String[] args) {
 		long timing = System.nanoTime();
 		for(int i=1; i<=ITERATION_COUNT; i++) {
-			// The value returned is not important.
+			// The return value is not important.
 			arraySumNoRef(TEST_ARRAY);
 		}
-		System.out.println("Execution time with no references: "
-				+ (System.nanoTime() - timing) + " ns");
+		System.out.println("Execution time with no reference: "
+				+ (double) (System.nanoTime() - timing)/1000 + " microsec");
 
 		timing = System.nanoTime();
 		for(int i=1; i<=ITERATION_COUNT; i++) {
-			// The value returned is not important.
+			// The return value is not important.
 			arraySumWithRef(TEST_ARRAY);
 		}
-		System.out.println("Execution time with references: "
-				+ (System.nanoTime() - timing) + " ns");
+		System.out.println("Execution time with reference: "
+				+ (double) (System.nanoTime() - timing)/1000 + " microsec");
 	}
 }
