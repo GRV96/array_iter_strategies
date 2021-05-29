@@ -1,8 +1,18 @@
-
+/**
+ * This class tests whether processing a 1-dimensional array is faster if a
+ * variable stores the array's length.
+ * @author Guyllaume Rousseau
+ */
 public final class LengthVariableStrategy {
 
 	private static final int ITERATION_COUNT = 1000;
 
+	/**
+	 * Calculates the sum of all integers in a 2-dimensional array. The
+	 * array's length is not stored in a variable.
+	 * @param array - a 1-dimensional array that contains integers
+	 * @return the sum of the numbers from the given array
+	 */
 	private static int arraySumNoLengthVar(int[] array) {
 		int sum = 0;
 
@@ -13,6 +23,12 @@ public final class LengthVariableStrategy {
 		return sum;
 	}
 
+	/**
+	 * Calculates the sum of all integers in a 2-dimensional array. A variable
+	 * stores the array's length.
+	 * @param array - a 1-dimensional array that contains integers
+	 * @return the sum of the numbers from the given array
+	 */
 	private static int arraySumWithLengthVar(int[] array) {
 		int sum = 0;
 		int length = array.length;
@@ -29,6 +45,7 @@ public final class LengthVariableStrategy {
 
 		long startTime = System.nanoTime();
 		for(int i=0; i<ITERATION_COUNT; i++) {
+			// The returned value is not important.
 			arraySumNoLengthVar(testArray);
 		}
 		long endTime = System.nanoTime();
@@ -37,6 +54,7 @@ public final class LengthVariableStrategy {
 
 		startTime = System.nanoTime();
 		for(int i=0; i<ITERATION_COUNT; i++) {
+			// The returned value is not important.
 			arraySumWithLengthVar(testArray);
 		}
 		endTime = System.nanoTime();

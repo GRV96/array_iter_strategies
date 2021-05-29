@@ -11,7 +11,7 @@ public final class SubarrayReferenceStrategy {
 	 * Calculates the sum of all integers in a 2-dimensional array. The outer
 	 * loop does not keep a reference to the subarrays.
 	 * @param array - a 2-dimensional array that contains integers
-	 * @return the sum of the numbers from the 2-dimensional array
+	 * @return the sum of the numbers from the given array
 	 */
 	private static int arraySumNoRef(int[][] array) {
 		int sum = 0;
@@ -30,7 +30,7 @@ public final class SubarrayReferenceStrategy {
 	 * Calculates the sum of all integers in a 2-dimensional array. The outer
 	 * loop keeps a reference to the subarrays.
 	 * @param array - a 2-dimensional array that contains integers
-	 * @return the sum of the numbers from the 2-dimensional array
+	 * @return the sum of the numbers from the given array
 	 */
 	private static int arraySumWithRef(int[][] array) {
 		int sum = 0;
