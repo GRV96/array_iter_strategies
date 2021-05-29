@@ -1,3 +1,4 @@
-# twoD_array_strategies
-Efficiency of two ways to process two-dimensional arrays: keeping a reference
-to the subarrays or not.
+# array_iter_strategies
+
+This repository tests the efficiency of different manners to iterate over Java
+arrays.
