@@ -2,14 +2,23 @@ import java.lang.Math;
 
 public final class IntArrayGeneration {
 
+	public static int[] makeRandIntArray(int length,
+			int minimum, int maximum) {
+		int[] randArray = new int[length];
+
+		for(int i=0; i<length; i++) {
+			randArray[i] = randInt(minimum, maximum);
+		}
+
+		return randArray;
+	}
+
 	public static int[][] make2dRandIntArray(int iSize, int jSize,
 			int minimum, int maximum) {
-		int[][] randArray = new int[iSize][jSize];
+		int[][] randArray = new int[iSize][];
 
 		for(int i=0; i<iSize; i++) {
-			for(int j=0; j<jSize; j++) {
-				randArray[i][j] = randInt(minimum, maximum);
-			}
+			randArray[i] = makeRandIntArray(jSize, minimum, maximum);
 		}
 
 		return randArray;
