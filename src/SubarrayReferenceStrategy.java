@@ -6,11 +6,6 @@
 public class SubarrayReferenceStrategy {
 
 	private static final int ITERATION_COUNT = 100;
-	private static final int[][] TEST_ARRAY = {
-		{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
-		{11, 12, 13, 14, 15, 16, 17, 18, 19, 20},
-		{21, 22, 23, 24, 25, 26, 27, 28, 29, 30},
-		{31, 32, 33, 34, 35, 36, 37, 38, 39, 40}};
 
 	/**
 	 * Calculates the sum of all elements in a 2-dimension array. The outer
@@ -50,14 +45,13 @@ public class SubarrayReferenceStrategy {
 	}
 
 	public static void main(String[] args) {
-		int[][] testArray = IntArrayGeneration.make2dRandIntArray(5, 7, 3, 5);
-		IntArrayGeneration.print2dIntArray(testArray, " ");
-		System.out.println();
+		int[][] testArray =
+			IntArrayGeneration.make2dRandIntArray(100, 100, 0, 100);
 
 		long startTime = System.nanoTime();
 		for(int i=1; i<=ITERATION_COUNT; i++) {
 			// The return value is not important.
-			arraySumNoRef(TEST_ARRAY);
+			arraySumNoRef(testArray);
 		}
 		long endTime = System.nanoTime();
 		System.out.println("Execution time with no reference: "
@@ -66,7 +60,7 @@ public class SubarrayReferenceStrategy {
 		startTime = System.nanoTime();
 		for(int i=1; i<=ITERATION_COUNT; i++) {
 			// The return value is not important.
-			arraySumWithRef(TEST_ARRAY);
+			arraySumWithRef(testArray);
 		}
 		endTime = System.nanoTime();
 		System.out.println("Execution time with reference: "
