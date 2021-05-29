@@ -1,5 +1,5 @@
 /**
- * This class tests whether processing a 2-dimension array is faster if the
+ * This class tests whether processing a 2-dimensional array is faster if the
  * outer loop keeps a reference to the subarray being processed.
  * @author Guyllaume Rousseau
  */
@@ -8,9 +8,9 @@ public class SubarrayReferenceStrategy {
 	private static final int ITERATION_COUNT = 1000;
 
 	/**
-	 * Calculates the sum of all elements in a 2-dimension array. The outer
+	 * Calculates the sum of all integers in a 2-dimensional array. The outer
 	 * loop does not keep a reference to the subarrays.
-	 * @param array - a 2-dimension array that contains integers
+	 * @param array - a 2-dimensional array that contains integers
 	 * @return the sum of the numbers from the 2-dimensional array
 	 */
 	private static int arraySumNoRef(int[][] array) {
@@ -27,9 +27,9 @@ public class SubarrayReferenceStrategy {
 	}
 
 	/**
-	 * Calculates the sum of all elements in a 2-dimension array. The outer
+	 * Calculates the sum of all integers in a 2-dimensional array. The outer
 	 * loop keeps a reference to the subarrays.
-	 * @param array - a 2-dimension array that contains integers
+	 * @param array - a 2-dimensional array that contains integers
 	 * @return the sum of the numbers from the 2-dimensional array
 	 */
 	private static int arraySumWithRef(int[][] array) {
@@ -52,7 +52,7 @@ public class SubarrayReferenceStrategy {
 
 		long startTime = System.nanoTime();
 		for(int i=1; i<=ITERATION_COUNT; i++) {
-			// The return value is not important.
+			// The returned value is not important.
 			arraySumNoRef(testArray);
 		}
 		long endTime = System.nanoTime();
@@ -61,7 +61,7 @@ public class SubarrayReferenceStrategy {
 
 		startTime = System.nanoTime();
 		for(int i=1; i<=ITERATION_COUNT; i++) {
-			// The return value is not important.
+			// The returned value is not important.
 			arraySumWithRef(testArray);
 		}
 		endTime = System.nanoTime();
