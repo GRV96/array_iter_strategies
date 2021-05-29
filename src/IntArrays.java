@@ -1,6 +1,6 @@
 import java.lang.Math;
 
-public final class IntArrayGeneration {
+public final class IntArrays {
 
 	public static int[] makeRandIntArray(int length,
 			int minimum, int maximum) {

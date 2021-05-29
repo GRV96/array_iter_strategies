@@ -3,7 +3,7 @@
  * outer loop keeps a reference to the subarray being processed.
  * @author Guyllaume Rousseau
  */
-public class SubarrayReferenceStrategy {
+public final class SubarrayReferenceStrategy {
 
 	private static final int ITERATION_COUNT = 1000;
 
@@ -47,8 +47,7 @@ public class SubarrayReferenceStrategy {
 	}
 
 	public static void main(String[] args) {
-		int[][] testArray =
-			IntArrayGeneration.make2dRandIntArray(100, 100, 0, 100);
+		int[][] testArray = IntArrays.make2dRandIntArray(100, 100, 0, 100);
 
 		long startTime = System.nanoTime();
 		for(int i=1; i<=ITERATION_COUNT; i++) {
