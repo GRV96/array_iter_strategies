@@ -3,7 +3,7 @@
  * variable stores the array's length.
  * @author Guyllaume Rousseau
  */
-public final class LengthVariableStrategy {
+public final class LengthVariableTest {
 
 	private static final int ITERATION_COUNT = 100000;
 

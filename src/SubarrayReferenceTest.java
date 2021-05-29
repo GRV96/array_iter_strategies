@@ -3,7 +3,7 @@
  * outer loop keeps a reference to the subarray being processed.
  * @author Guyllaume Rousseau
  */
-public final class SubarrayReferenceStrategy {
+public final class SubarrayReferenceTest {
 
 	private static final int ITERATION_COUNT = 1000;
 
