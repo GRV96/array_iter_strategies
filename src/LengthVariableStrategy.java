@@ -1,7 +1,7 @@
 
 public final class LengthVariableStrategy {
 
-	private static final int ITERATION_COUNT = 100;
+	private static final int ITERATION_COUNT = 1000;
 
 	private static int arraySumNoLengthVar(int[] array) {
 		int sum = 0;
@@ -33,14 +33,14 @@ public final class LengthVariableStrategy {
 		}
 		long endTime = System.nanoTime();
 		System.out.println("Execution time with no length variable: "
-				+ (double) (endTime-startTime)/1000 + " microsec");
+				+ (double) (endTime-startTime)/1000 + " microseconds");
 
 		startTime = System.nanoTime();
 		for(int i=0; i<ITERATION_COUNT; i++) {
 			arraySumWithLengthVar(testArray);
 		}
 		endTime = System.nanoTime();
-		System.out.println("Execution time with length variable: "
-				+ (double) (endTime-startTime)/1000 + " microsec");
+		System.out.println("Execution time with a length variable: "
+				+ (double) (endTime-startTime)/1000 + " microseconds");
 	}
 }
