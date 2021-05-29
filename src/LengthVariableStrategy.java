@@ -5,7 +5,7 @@
  */
 public final class LengthVariableStrategy {
 
-	private static final int ITERATION_COUNT = 1000;
+	private static final int ITERATION_COUNT = 100000;
 
 	/**
 	 * Calculates the sum of all integers in a 2-dimensional array. The
