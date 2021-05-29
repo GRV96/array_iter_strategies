@@ -5,7 +5,7 @@
  */
 public class SubarrayReferenceStrategy {
 
-	private static final int ITERATION_COUNT = 100;
+	private static final int ITERATION_COUNT = 1000;
 
 	/**
 	 * Calculates the sum of all elements in a 2-dimension array. The outer
