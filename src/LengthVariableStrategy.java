@@ -41,14 +41,16 @@ public final class LengthVariableStrategy {
 	}
 
 	public static void main(String[] args) {
+		long startTime = 0;
+		long endTime = 0;
 		int[] testArray = IntArrays.makeRandIntArray(100, 0, 100);
 
-		long startTime = System.nanoTime();
+		startTime = System.nanoTime();
 		for(int i=0; i<ITERATION_COUNT; i++) {
 			// The returned value is not important.
 			arraySumNoLengthVar(testArray);
 		}
-		long endTime = System.nanoTime();
+		endTime = System.nanoTime();
 		System.out.println("Execution time with no length variable: "
 				+ (double) (endTime-startTime)/1000 + " microseconds");
 

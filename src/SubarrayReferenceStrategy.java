@@ -47,14 +47,16 @@ public final class SubarrayReferenceStrategy {
 	}
 
 	public static void main(String[] args) {
+		long startTime = 0;
+		long endTime = 0;
 		int[][] testArray = IntArrays.make2dRandIntArray(100, 100, 0, 100);
 
-		long startTime = System.nanoTime();
+		startTime = System.nanoTime();
 		for(int i=1; i<=ITERATION_COUNT; i++) {
 			// The returned value is not important.
 			arraySumNoRef(testArray);
 		}
-		long endTime = System.nanoTime();
+		endTime = System.nanoTime();
 		System.out.println("Execution time with no reference: "
 				+ (double) (endTime-startTime)/1000 + " microseconds");
 
