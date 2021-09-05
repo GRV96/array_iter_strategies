@@ -8,7 +8,7 @@ public final class LengthVariableTest {
 	private static final int ITERATION_COUNT = 100000;
 
 	/**
-	 * Calculates the sum of all integers in a 2-dimensional array. The
+	 * Calculates the sum of all integers in a 1-dimensional array. The
 	 * array's length is not stored in a variable.
 	 * @param array - a 1-dimensional array that contains integers
 	 * @return the sum of the numbers from the given array
@@ -24,7 +24,7 @@ public final class LengthVariableTest {
 	}
 
 	/**
-	 * Calculates the sum of all integers in a 2-dimensional array. A variable
+	 * Calculates the sum of all integers in a 1-dimensional array. A variable
 	 * stores the array's length.
 	 * @param array - a 1-dimensional array that contains integers
 	 * @return the sum of the numbers from the given array
