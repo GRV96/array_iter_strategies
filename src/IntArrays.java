@@ -1,8 +1,8 @@
 import java.lang.Math;
 
 /**
- * The functions provided in this class allow to generate and use
- * 1-dimensional and 2-dimensional arrays of integers.
+ * The methods provided in this class allow to generate and use 1-dimensional
+ * and 2-dimensional arrays of random integers.
  * @author Guyllaume Rousseau
  */
 public final class IntArrays {
